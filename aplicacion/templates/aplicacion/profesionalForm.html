@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nuevo profesional</title>
+</head>
+<body>
+    <h2>crear nuevo profesional</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>nombre: <input type="text" name="nombre" id="nombre"></p>
+        <p>apellido: <input type="text" name="apellido" id="apellido"></p>
+        <p>email: <input type="email" name="email" id="email"></p>
+        <p>profesion: <input type="text" name="profesion" id="profesion"></p>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

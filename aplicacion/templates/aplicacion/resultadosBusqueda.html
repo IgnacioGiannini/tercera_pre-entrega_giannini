@@ -1,0 +1,76 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block cabecera %}
+profesionales de apellido {{ apellido }}
+{% endblock cabecera %}
+
+
+{% block contenido %}
+    
+
+    
+    
+
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fonoaudiologo in Fonoaudiologo %}
+            <tr>
+                <td>{{ fonoaudiologo.id }}</td>
+                <td> {{fonoaudiologo.nombre}}</td>
+                <td>{{fonoaudiologo.apellido}}</td>
+                <td>{{fonoaudiologo.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table">
+        <tbody>
+            {% for odonto in Odontologo %}
+            <tr>
+                <td>{{ odonto.id }}</td>
+                <td> {{odonto.nombre}}</td>
+                <td>{{odonto.apellido}}</td>
+                <td>{{odonto.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table">
+        <tbody>
+            {% for pediatra in Pediatra %}
+            <tr>
+                <td>{{ pediatra.id }}</td>
+                <td> {{pediatra.nombre}}</td>
+                <td>{{pediatra.apellido}}</td>
+                <td>{{pediatra.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table">
+        <tbody>
+            {% for medico in Medico %}
+            <tr>
+                <td>{{ medico.id }}</td>
+                <td> {{medico.nombre}}</td>
+                <td>{{medico.apellido}}</td>
+                <td>{{medico.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}

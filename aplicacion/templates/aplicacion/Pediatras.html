@@ -1,0 +1,38 @@
+{%extends 'aplicacion/base.html'%}
+{% load static %}
+
+
+{% block titulo %}
+    Pediatras
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Pediatras
+{% endblock cabecera %}
+    
+
+
+{%block contenido%}
+    <h1>informacion</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pediatra in Pediatras %}
+        <tr>
+            <td>{{ pediatra.id }}</td>
+            <td> {{pediatra.nombre}}</td>
+            <td>{{pediatra.apellido}}</td>
+            <td>{{pediatra.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock contenido%}

@@ -1,0 +1,42 @@
+{%extends 'aplicacion/base.html'%}
+{% load static %}
+
+
+{% block titulo %}
+    Fonoaudiologos
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Fonoaudiologos
+{% endblock cabecera %}
+    
+
+
+{%block contenido%}
+    <h1>informacion</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for fonoaudiologo in Fonoaudiologos %}
+        <tr>
+            <td>{{ fonoaudiologo.id }}</td>
+            <td> {{fonoaudiologo.nombre}}</td>
+            <td>{{fonoaudiologo.apellido}}</td>
+            <td>{{fonoaudiologo.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock contenido%}
+
+
+
+

@@ -1,0 +1,40 @@
+{%extends 'aplicacion/base.html'%}
+{% load static %}
+
+
+{% block titulo %}
+    Nuevos Profesionales
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Nuevos Profesionales
+{% endblock cabecera %}
+    
+
+
+{%block contenido%}
+    <h1>informacion</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+            <th>profesion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for nuevopro in NuevoProfesionales %}
+        <tr>
+            <td>{{ nuevopro.id }}</td>
+            <td> {{nuevopro.nombre}}</td>
+            <td>{{nuevopro.apellido}}</td>
+            <td>{{nuevopro.email}}</td>
+            <td>{{nuevopro.profesion}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock contenido%}

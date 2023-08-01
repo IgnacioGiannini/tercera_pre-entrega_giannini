@@ -1,0 +1,38 @@
+{%extends 'aplicacion/base.html'%}
+{% load static %}
+
+
+{% block titulo %}
+    Odontologos
+{% endblock titulo %}
+
+
+{% block cabecera %}
+    Odontologos
+{% endblock cabecera %}
+    
+
+
+{%block contenido%}
+    <h1>informacion</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for odonto in Odontologos %}
+        <tr>
+            <td>{{ odonto.id }}</td>
+            <td> {{odonto.nombre}}</td>
+            <td>{{odonto.apellido}}</td>
+            <td>{{odonto.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endblock contenido%}
